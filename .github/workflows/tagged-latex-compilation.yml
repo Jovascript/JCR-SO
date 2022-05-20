@@ -6,7 +6,6 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
     tags: ["*"]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -29,18 +28,14 @@ jobs:
           # The root LaTeX file to be compiled
           root_file: Constitution.tex
           # Extra arguments to be passed to the latex compiler
-          args: # optional, default is -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-          # Install extra packages by apt-get
-          extra_system_packages: # optional
+          args: -cd -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       - name: Compile SOs
         uses: dante-ev/latex-action@2021-A
         with:
           # The root LaTeX file to be compiled
           root_file: StandingOrders.tex
           # Extra arguments to be passed to the latex compiler
-          args: # optional, default is -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-          # Install extra packages by apt-get
-          extra_system_packages: # optional
+          args: -cd -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       # Runs a set of commands using the runners shell
       - name: Upload Constitution
         uses: actions/upload-artifact@v3.1.0
