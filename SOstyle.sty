@@ -1,0 +1,266 @@
+\usepackage{enumerate}
+\usepackage{letltxmacro}
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+\setsecnumdepth{subparagraph}
+\setcounter{tocdepth}{1}
+
+\usepackage{enumitem}
+\setlist[enumerate]{topsep=3pt, parsep=0pt}
+\setlist[enumerate,1]{label=\roman*., align=left}
+
+\usepackage{nameref}
+\usepackage{zref-xr}
+\zxrsetup{toltxlabel}
+\zexternaldocument*{Constitution}
+\usepackage{hyperref}
+%\usepackage{titlesec}
+%\usepackage{etoolbox}
+%\usepackage{lipsum}
+
+%\setcounter{secnumdepth}{5}
+%\renewcommand\thesection{\arabic{section}}
+
+
+
+%\pretocmd{\paragraph}{\stepcounter{subsection}}{}{}
+%\pretocmd{\subparagraph}{\stepcounter{subsubsection}}{}{}
+% this length controls tha hanging indent for titles
+% change the value according to your needs
+
+\settowidth{\chapindent}{\normalfont\normalsize 9.9.9.9.9}
+\addtolength{\chapindent}{6pt}
+\newlength\titleindent
+\setlength\titleindent{\chapindent}
+\addtolength{\chapindent}{2pt}
+%\addtolength{\foremargin}{1em}
+\addtolength{\spinemargin}{6pt}
+\addtolength{\textwidth}{-6pt}
+\setlength{\beforechapskip}{0pt}
+\setlength{\afterchapskip}{10pt}
+\renewcommand{\chapnamefont}{\normalfont\LARGE\scshape}
+\renewcommand{\chapternamenum}{}
+\renewcommand{\printchaptername}{\chapnamefont}
+\renewcommand{\printchapternum}{\chapnamefont \indent\llap{\makebox[\chapindent][l]{\thechapter\hfill}}}
+\renewcommand{\afterchapternum}{\hspace*{-8pt}}
+\renewcommand{\chaptitlefont}{\normalfont\LARGE\scshape}
+
+%\hangsecnum
+\setsechook{\setsecnumformat{\llap{\makebox[\titleindent][l]{\csname the##1\endcsname}}\hspace*{-6pt}}}
+\setsubsechook{\setsecnumformat{\llap{\makebox[\titleindent][l]{\csname the##1\endcsname}}\hspace*{-4pt}}}
+\setbeforesecskip{-2ex plus -0.5ex minus -0.2ex}
+\setaftersecskip{1.5ex plus 0.2ex}
+\setbeforesubsecskip{-1.7ex plus -0.5ex minus -0.2ex}
+\setaftersubsecskip{0.9ex plus 0.2ex}
+\setsecheadstyle{\Large\bfseries}
+%\setsechook{\hspace*{10pt}}
+\setsubsecheadstyle{\normalsize\bfseries}
+
+\setparaheadstyle{}
+\setbeforeparaskip{1.7ex plus 0.5ex minus 0.2ex}
+\setafterparaskip{0pt}
+\setparahook{\setsecnumformat{\llap{\makebox[\titleindent][l]{\csname the##1\endcsname}}}}
+%\setlength{\parindent}{0pt}
+
+%\titleformat{\chapter}[block]
+%{\normalfont\Large}{\raisebox{1pt}{\llap{\parbox{\titleindent}{\thechapter\hfill}}}}{0pt}{\hspace*{-1cm}\textsc}
+%{\normalfont\Huge}{\llap{\parbox{\titleindent}{\thechapter}}}{0em}{\hspace*{-1cm}\textsc}
+
+\iffalse
+\titleformat{\section}[block]
+{\normalfont\large\bfseries}{\raisebox{1pt}{\llap{\parbox{\titleindent}{\thesection\hfill}}}}{0em}{\hspace*{-10pt}}
+
+\titleformat{\subsection}[block]
+{\normalfont\normalsize}{\raisebox{1pt}{\llap{\parbox{\titleindent}{\thesubsection\hfill}}}}{0em}{\textbf}
+
+\titleformat{\subsubsection}[block]
+{\normalfont\normalsize}{\raisebox{1pt}{\llap{\parbox{\titleindent}{\thesubsubsection}}}}{0em}{\bfseries}
+
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize}{\raisebox{1pt}{\llap{\parbox{\titleindent}{\parnumber\hfill}}}}{0em}{}
+
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize}{\llap{\parbox{\titleindent}{\thesubsubsection\hfill}}}{0em}{}
+
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0em}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0em}
+\fi
+
+\newcounter{minchapdepth}
+\newcounter{maxchapdepth}
+\newcounter{minsecdepth}
+\newcounter{maxsecdepth}
+\newcounter{minssecdepth}
+\newcounter{maxssecdepth}
+
+
+
+\newcounter{secdepth}
+%\newcommand{\phlargl}{\par\arabic{mynum}\space}
+\newcommand{\setsecdepth}[2]{%
+	\ifnum\value{#1}=0
+		\setcounter{secdepth}{#2}
+	\else
+		\ifnum\value{#1}=1
+			\ifnum\value{#2}>=\value{minchapdepth}
+				\ifnum\value{#2}<=\value{maxchapdepth}
+					\setcounter{secdepth}{#2}
+				\fi
+			\fi
+		\else
+			\ifnum\value{#1}=2
+				\ifnum\value{#2}>=\value{minsecdepth}
+					\ifnum\value{#2}<=\value{maxsecdepth}
+						\setcounter{secdepth}{#2}
+					\fi
+				\fi
+			\else
+				\ifnum\value{#1}=3
+			
+}
+\newcommand{\parnumber}{%
+	\ifnum\value{secdepth}=0
+	\arabic{chapter}.\arabic{section}
+	\else
+		\ifnum\value{secdepth}=1
+		\arabic{chapter}.\arabic{section}.\arabic{subsection}
+		\else
+			\ifnum\value{secdepth}=2
+			\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}
+			\else
+				\ifnum\value{secdepth}=3
+				\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}
+				\else
+					\ifnum\value{secdepth}=4
+					\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.\arabic{subparagraph}
+					\else
+						X
+					\fi
+				\fi
+			\fi
+		\fi
+	\fi%
+}
+
+\newcommand{\appparnumber}{%
+	\ifnum\value{secdepth}=0
+	\Alph{chapter}.\arabic{section}
+	\else
+		\ifnum\value{secdepth}=1
+		\Alph{chapter}.\arabic{section}.\arabic{subsection}
+		\else
+			\ifnum\value{secdepth}=2
+			\Alph{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}
+			\else
+				\ifnum\value{secdepth}=3
+				\Alph{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}
+				\else
+					\ifnum\value{secdepth}=4
+					\Alph{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.\arabic{subparagraph}
+					\else
+						X
+					\fi
+				\fi
+			\fi
+		\fi
+	\fi%
+}
+
+\renewcommand{\theparagraph}{\parnumber}
+\newcommand{\minzc}[2]{%
+	\ifnum#1<\value{#2}
+		#1
+	\else
+		\value{#2}
+	\fi%
+}
+
+\newcommand{\maxzc}[2]{%
+	\ifnum#1>\value{#2}
+		#1
+	\else
+		\value{#2}
+	\fi%
+}
+
+\LetLtxMacro{\oldchap}{\chapter}
+\renewcommand{\chapter}{\setcounter{minchapdepth}{0}\setcounter{maxchapdepth}{4}\setcounter{secdepth}{0}\oldchap}
+\LetLtxMacro{\oldsec}{\section}
+\renewcommand{\section}{\setcounter{minsecdepth}{\minzc{1}{minchapdepth}}\setcounter{maxsecdepth}{\maxzc{4}{maxchapdepth}}\setcounter{secdepth}{1}\oldsec}
+\LetLtxMacro{\oldssec}{\subsection}
+\renewcommand{\subsection}{\setcounter{minssecdepth}{\minzc{2}{minsecdepth}}\setcounter{maxssecdepth}{\maxzc{4}{maxsecdepth}}\setcounter{secdepth}{2}\oldssec}
+
+\newcommand{\iteratecount}[1]{%
+	\ifnum\value{#1}=0
+		\stepcounter{section}
+	\else
+		\ifnum\value{#1}=1
+			\stepcounter{subsection}
+		\else
+			\ifnum\value{#1}=2
+				\stepcounter{subsubsection}
+			\else
+				\ifnum\value{#1}=3
+					\stepcounter{paragraph}
+				\else
+					\ifnum\value{#1}=4
+						\stepcounter{subparagraph}
+					\else
+						ITERATION ERROR
+					\fi
+				\fi
+			\fi
+		\fi
+	\fi%	
+}
+
+\newcommand{\appiteratecount}[1]{%
+
+	\ifnum\value{#1}=0
+		\stepcounter{chapter}
+	\else
+		\ifnum\value{#1}=1
+			\stepcounter{section}
+		\else
+			\ifnum\value{#1}=2
+				\stepcounter{subsection}
+			\else
+				\ifnum\value{#1}=3
+					\stepcounter{subsubsection}
+				\else
+					\ifnum\value{#1}=4
+						\stepcounter{paragraph}
+					\else
+					    \ifnum\value{#1}=5
+						    \stepcounter{subparagraph}
+					    \else
+						    ITERATION ERROR
+						\fi
+					\fi
+				\fi
+			\fi
+		\fi
+	\fi%	
+}
+
+
+
+\newcommand{\npara}[1][]{\iteratecount{secdepth}\paragraph{#1}\addtocounter{paragraph}{-1}}
+
+\newcounter{secdepth2}
+\setcounter{secdepth2}{\value{secdepth}}
+\addtocounter{secdepth2}{0}
+%\value{secdepth2} = \value{secdepth}
+
+\newcommand{\appnpara}[1][]{\renewcommand{\theparagraph}{\appparnumber}\iteratecount{secdepth}\paragraph{#1}\addtocounter{paragraph}{-1}}
+
+
+\renewcommand{\printtoctitle}[1]{\normalfont\Large\textsc {#1}}

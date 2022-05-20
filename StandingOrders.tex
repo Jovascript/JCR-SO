@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper,oneside]{memoir}
+\usepackage{enumitem}
+\usepackage{longtable}
+%\usepackage{xr}
+\input{SOstyle.sty}
+
+% In your preamble
+
+%\makeatletter
+%\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+%  \typeout{(#1)}
+%  \@addtofilelist{#1}
+%  \IfFileExists{#1}{}{\typeout{No file #1.}}
+%}
+%\makeatother
+
+%\newcommand*{\myexternaldocument}[1]{%
+%    \externaldocument{#1}%
+%    \addFileDependency{#1.tex}%
+%    \addFileDependency{#1.aux}%
+%}
+
+%\myexternaldocument{Constitution}
+\setulmarginsandblock{25mm}{30mm}{*}
+\checkandfixthelayout
+
+\begin{document}
+	\pagestyle{plain}
+	\thispagestyle{empty}
+	\begin{center}
+		\includegraphics[width=5cm]{mertoncollegejcr}
+		\begin{vplace}[0.1] \Huge  
+			\textbf{Standing Orders}
+		\end{vplace}
+		{ \Large
+			Version: \today
+		}
+		\vfill
+	\end{center}
+	\cleardoublepage
+	\frontmatter
+	\tableofcontents
+	\include{tex/Preface-Introduction}
+	
+	\mainmatter
+	\part{Standing Orders}
+	\include{tex/SO_General}
+	\include{tex/SO_Committees}
+	\include{tex/SO_Roles}
+	\include{tex/SO_Elections}
+	\include{tex/SO_Referenda}
+	\include{tex/SO_GeneralMeeting}
+	\include{tex/SO_RoomBallot}
+	\include{tex/SO_Finances}
+	\include{tex/SO_ExternalAffiliations}
+	\include{tex/SO_Complaints}
+	\include{tex/SO_Emergencies}
+	\part{Appendices}
+	\begin{appendices}
+		\include{tex/Appendix_Definitions}
+        \include{tex/Appendix_IntDefinitions}
+		\include{tex/Appendix_RoomBallot}
+		\include{tex/Appendix_CharitiesCommittee}
+		\include{tex/Appendix_CharitiesBallot}
+		\include{tex/Appendix_STV}
+	\end{appendices}
+	\part{Memoranda}
+	\begin{appendices}
+		\include{tex/Memorandum_MCR}
+		\include{tex/Memorandum_Publications}
+		\include{tex/Memorandum_Ball}
+	\end{appendices}
+	%\part{ Guidance}
+	%\begin{appendices}
+		%\include{tex/Guidance_HowtoOGM}
+		
+	%\end{appendices}
+	
+	
+\end{document}
