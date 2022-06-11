@@ -37,14 +37,11 @@ jobs:
           # Extra arguments to be passed to the latex compiler
           args: -cd -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       # Runs a set of commands using the runners shell
-      - name: Upload Constitution
+      - name: Upload
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: Constitution
-          path: Constitution.pdf
-      - name: Upload SOs
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          name: Standing Orders
-          path: StandingOrders.pdf
+          name: JCR SOs
+          path: |
+            StandingOrders.pdf
+            Constitution.pdf
           
