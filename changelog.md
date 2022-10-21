@@ -5,6 +5,7 @@ All textual changes requiring General Meeting approval will be documented in thi
 ## [OGM MT22.1] - 2022-10-09
 
  - Fixed auto-resignation bug, by limiting auto-resignation to JCR Committee members, in addition to changing slightly the timings and making language clearer.
+ - Fixed some typos/omissions.
 
 ## [OGM TT22.3] - 2022-05-29
 
