@@ -2,6 +2,10 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM MT22.2] - 2022-10-23
+
+ - Classicists no longer get moved to the bottom of the 3rd year ballot. There is a one-year only special measure for current 3rd year classicists, to get a choice of original position in 3rd year or 4th year top half.
+
 ## [OGM MT22.1] - 2022-10-09
 
  - Fixed auto-resignation bug, by limiting auto-resignation to JCR Committee members, in addition to changing slightly the timings and making language clearer.
