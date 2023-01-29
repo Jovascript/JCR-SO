@@ -2,6 +2,11 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM HT23.2] - 2022-01-29
+
+ - Reformed Subject Society funding, now specified to be allocated in proportion to memberhsip numbers of each society.
+ - Inserted Memorandum agreed with MCR about BOP Cost Sharing.
+
 ## [OGM MT22.1] - 2022-10-09
 
  - Fixed auto-resignation bug, by limiting auto-resignation to JCR Committee members, in addition to changing slightly the timings and making language clearer.
