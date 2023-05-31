@@ -2,6 +2,11 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM TT23.2] - 2022-05-07
+
+ - Added the pre-booking system to the Disabled Students' Representative's duties.
+ - Reduced JCR Committee (pre-OGM) meetings to once per term, and additionally at the request of 5 Committee members.
+
 ## [OGM HT23.3] - 2022-02-xx
 
  - Inserted Memorandum agreed with the MCR about the Games Room funding.
