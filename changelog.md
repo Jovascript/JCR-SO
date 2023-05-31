@@ -2,6 +2,11 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM HT23.3] - 2022-02-xx
+
+ - Inserted Memorandum agreed with the MCR about the Games Room funding.
+ - Minor amendments to the Winter Ball Appendix.
+
 ## [OGM HT23.2] - 2022-01-29
 
  - Reformed Subject Society funding, now specified to be allocated in proportion to memberhsip numbers of each society.
