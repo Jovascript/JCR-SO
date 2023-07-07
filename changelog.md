@@ -2,17 +2,21 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
-## [OGM TT23.2] - 2022-05-07
+## [OGM TT23.4] - 2023-06-04
+
+ - Created the Transgender Representative.
+
+## [OGM TT23.2] - 2023-05-07
 
  - Added the pre-booking system to the Disabled Students' Representative's duties.
  - Reduced JCR Committee (pre-OGM) meetings to once per term, and additionally at the request of 5 Committee members.
 
-## [OGM HT23.3] - 2022-02-xx
+## [OGM HT23.3] - 2023-02-xx
 
  - Inserted Memorandum agreed with the MCR about the Games Room funding.
  - Minor amendments to the Winter Ball Appendix.
 
-## [OGM HT23.2] - 2022-01-29
+## [OGM HT23.2] - 2023-01-29
 
  - Reformed Subject Society funding, now specified to be allocated in proportion to memberhsip numbers of each society.
  - Inserted Memorandum agreed with MCR about BOP Cost Sharing.
