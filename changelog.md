@@ -2,6 +2,10 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM MT23.3]
+
+ - Added duty of Charity Representative to maintain JCR Food Bank.
+
 ## [OGM MT23.1]
 
  - Adjusted 'page' to 'group' as Facebook place where JCR Photos are published.
