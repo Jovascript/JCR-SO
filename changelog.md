@@ -2,6 +2,10 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM HT24.2]
+
+ - Removed explicit provision of frequency of JCR Bar Quizzes.
+
 ## [OGM MT23.3]
 
  - Added duty of Charity Representative to maintain JCR Food Bank.
