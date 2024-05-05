@@ -2,6 +2,10 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM HT24.4]
+
+ - Remove overly prescriptive deadlines for the Room Ballot.
+
 ## [OGM HT24.2]
 
  - Removed explicit provision of frequency of JCR Bar Quizzes.
