@@ -44,4 +44,11 @@ jobs:
           path: |
             StandingOrders.pdf
             Constitution.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            StandingOrders.pdf
+            Constitution.pdf
           

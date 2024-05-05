@@ -2,6 +2,11 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM MT23.1]
+
+ - Adjusted 'page' to 'group' as Facebook place where JCR Photos are published.
+ - Infra: auto-release.
+
 ## [OGM TT23.4] - 2023-06-04
 
  - Created the Transgender Representative.
