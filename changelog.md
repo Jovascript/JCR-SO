@@ -2,6 +2,11 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM TT24.2]
+
+ - Update Role Descriptions for Vice-President and Access and Equality Representative.
+ - Remove the Access Sub-Committee.
+
 ## [OGM HT24.4]
 
  - Remove overly prescriptive deadlines for the Room Ballot.
