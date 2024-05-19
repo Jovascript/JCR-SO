@@ -2,6 +2,10 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM TT24.3] - 2024-05-19
+
+ - Update Role Descriptions for Welfare Officers and Entertainment Representatives.
+
 ## [OGM TT24.2]
 
  - Update Role Descriptions for Vice-President and Access and Equality Representative.
