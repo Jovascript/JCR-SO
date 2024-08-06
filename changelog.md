@@ -2,6 +2,17 @@
 
 All textual changes requiring General Meeting approval will be documented in this file.
 
+## [OGM TT24.4] - 2024-06-02
+
+ - Update Role Description for the Academic Affairs Officer, and create agreement procedure for Joint-Subject Subject Society funding.
+ - Allow some committees not to have a Secretary, but introduce provisions for more informal record-keeping.
+ - Removes termly committee reports.
+ - Cleans up role title consistency and removes redundant defintions in Appendix B.
+ - Gives Appendices B, E and G binding effect.
+ - Reverses unused resolution tracking and responsibility provisions.
+ - Allows invalid/unlawful motions to be rejected prior to passing.
+ - Removes voting by parts and by physical division.
+
 ## [OGM TT24.3] - 2024-05-19
 
  - Update Role Descriptions for Welfare Officers and Entertainment Representatives.
